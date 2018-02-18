@@ -7,20 +7,20 @@ class ShoppingList {
     if (item instanceof ShoppingListItem) {
       this.items.push(item);
     } else {
-      throw Error;
+      throw Error('Item is not a Shopping List Item');
     }
   }
 
   removeItem(item) {
     let index = this.items.indexOf(item);
     if (item instanceof ShoppingListItem && index !== -1) {
-      array.splice(index, 1);
+      this.items.splice(index, 1);
     } else if (item === undefined) {
       if (this.items.length > 0) {
         this.items.pop();
       }
     } else {
-      throw Error;
+      throw Error('Item not found');
     }
   }
 

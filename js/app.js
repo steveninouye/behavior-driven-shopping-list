@@ -5,12 +5,7 @@
     document.getElementById('content').innerHTML = renderedShoppingList;
   })();
 
-  function getIndexOfNode() {
-    //
-  }
-
   window.add_to_shopping_list = () => {
-    console.log('testing');
     let title = document.getElementById('title').value;
     let description = document.getElementById('description').value;
     let new_shopping_list_item = new ShoppingListItem(title, description);
@@ -19,7 +14,11 @@
     return false;
   };
 
-  window.changeCheckedStatus = () => {
-    shoppingList.indexof();
+  window.changeCheckedStatus = id => {
+    shoppingList.items.forEach((e, i) => {
+      if (e.id === id) {
+        e.toggleIsDone();
+      }
+    });
   };
 })();

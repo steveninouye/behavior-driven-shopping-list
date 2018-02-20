@@ -1,9 +1,13 @@
 (function() {
   let shoppingList = new ShoppingList();
-  (window.renderShoppingList = () => {
+  (renderShoppingList = () => {
     let renderedShoppingList = shoppingList.render();
     document.getElementById('content').innerHTML = renderedShoppingList;
   })();
+
+  function getIndexOfNode() {
+    //
+  }
 
   window.add_to_shopping_list = () => {
     console.log('testing');
@@ -13,5 +17,9 @@
     shoppingList.addItem(new_shopping_list_item);
     renderShoppingList();
     return false;
+  };
+
+  window.changeCheckedStatus = () => {
+    shoppingList.indexof();
   };
 })();

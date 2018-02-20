@@ -44,27 +44,27 @@ describe('ShoppingListItem Test', () => {
       expect(testShoppingListItem).to.have.property('description', 'Red Fruit');
     });
 
-    //ShoppingListItem has a method named *check*
-    it('ShoppingListItem has a method named "check"', () => {
-      expect(shoppingListItem).to.respondTo('check');
-    });
+    // //ShoppingListItem has a method named *check*
+    // it('ShoppingListItem has a method named "check"', () => {
+    //   expect(shoppingListItem).to.respondTo('check');
+    // });
 
-    //calling the instance *check* method will set it's *is_done* property to true
-    it('calling the instance "check" method will set its "is_done" property to true', () => {
-      shoppingListItem.check();
-      expect(shoppingListItem).to.have.property('is_done', true);
-    });
+    // //calling the instance *check* method will set it's *is_done* property to true
+    // it('calling the instance "check" method will set its "is_done" property to true', () => {
+    //   shoppingListItem.check();
+    //   expect(shoppingListItem).to.have.property('is_done', true);
+    // });
 
-    //ShoppingListItem has a method named *uncheck*
-    it('ShoppingListItem has a method named "uncheck"', () => {
-      expect(shoppingListItem).to.respondTo('uncheck');
-    });
+    // //ShoppingListItem has a method named *uncheck*
+    // it('ShoppingListItem has a method named "uncheck"', () => {
+    //   expect(shoppingListItem).to.respondTo('uncheck');
+    // });
 
-    //calling the instance's *uncheck* mehod will set its *is_done* property to false
-    it('calling the instance "uncheck" method will set its "is_done" property to false', () => {
-      shoppingListItem.uncheck();
-      expect(shoppingListItem).to.have.property('is_done', false);
-    });
+    // //calling the instance's *uncheck* mehod will set its *is_done* property to false
+    // it('calling the instance "uncheck" method will set its "is_done" property to false', () => {
+    //   shoppingListItem.uncheck();
+    //   expect(shoppingListItem).to.have.property('is_done', false);
+    // });
 
     //ShoppingListItem has a method named *render*
     it('ShoppingListItem has a method named "render"', () => {

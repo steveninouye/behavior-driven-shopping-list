@@ -1,9 +1,11 @@
 (function() {
   let shoppingList = new ShoppingList();
-  (renderShoppingList = () => {
+
+  const renderShoppingList = () => {
     let renderedShoppingList = shoppingList.render();
     document.getElementById('content').innerHTML = renderedShoppingList;
-  })();
+  };
+  renderShoppingList();
 
   window.add_to_shopping_list = () => {
     let title = document.getElementById('title').value;
@@ -15,10 +17,19 @@
   };
 
   window.changeCheckedStatus = id => {
-    shoppingList.items.forEach((e, i) => {
+    shoppingList.items.forEach(e => {
       if (e.id === id) {
         e.toggleIsDone();
       }
     });
+  };
+
+  window.removeItemButtonClicked = id => {
+    shoppingList.items.forEach(e => {
+      if (e.id === id) {
+        shoppingList.removeItem(e);
+      }
+    });
+    renderShoppingList();
   };
 })();
